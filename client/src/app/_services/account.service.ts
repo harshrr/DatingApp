@@ -47,8 +47,6 @@ export class AccountService {
    setCurrentUser(user: User){
      this.currentUserSorce.next(user);
    }
-   
-
 
    logout(){
       localStorage.removeItem("user");
