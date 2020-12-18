@@ -13,8 +13,10 @@
               <a class="nav-link" routerLink="/messages" routerLinkActive='active'>Messages</a>
             </li>         
           </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/errors" routerLinkActive='active'>Errors</a>
+          </li> 
         </ul>
-
         <a class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
             <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
@@ -22,8 +24,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" (click)="logout()">Logout</a>              
             </div>
-        </a>
-        
+        </a>        
         <form  *ngIf="(accountService.currentUser$ | async) === null" 
             #loginForm="ngForm" class="d-flex" (ngSubmit)="logIn()" autocomplete="off">
           <input name="username" [(ngModel)] ="model.username" class="form-control mr-sm-2" type="text" placeholder="Username">
