@@ -443,3 +443,5 @@ $RECYCLE.BIN/
 
 appsettings.json
 API/appsettings.Development.json
+client/tsconfig.json
+client/tsconfig.app.json
